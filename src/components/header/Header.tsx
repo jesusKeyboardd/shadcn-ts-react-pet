@@ -1,4 +1,4 @@
-import Logo from "@/components/logo/Logo";
+import { Logo } from "@/components/Logo/";
 import { Button } from "../ui/button";
 
 export default function Header() {
