@@ -4,13 +4,15 @@ export default function Section({
   title,
   subtitle,
   children,
+  className,
 }: {
-  title: string;
-  subtitle: string;
+  title?: string;
+  subtitle?: string;
   children: React.ReactNode;
+  className?: string;
 }) {
   return (
-    <section className="pt-[220px]">
+    <section className={"pt-[220px]" + " " + className}>
       <div className="flex flex-col max-w-[833px] mx-auto items-center gap-7">
         <h2 className="font-medium text-5xl leading-14 tracking-[-0.01em]">
           {title}

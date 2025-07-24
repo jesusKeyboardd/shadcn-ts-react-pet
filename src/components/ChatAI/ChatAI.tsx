@@ -113,12 +113,8 @@ export default function ChatAI() {
     return data.slice(page * pageSize, (page + 1) * pageSize);
   }
 
-  useEffect(() => {
-    console.log(page);
-  }, []);
-
   return (
-    <Tabs className="mb-20">
+    <Tabs className="mb-20" defaultValue={tabs.community}>
       <div className="rounded-xl bg-neutral-950 w-[100%] flex min-h-[930px] max-h-[930px] overflow-clip">
         <div className="bg-neutral-900 relative flex flex-col justify-between">
           <div className="flex flex-col pl-3 py-12 pr-7 gap-6 ">
@@ -237,6 +233,7 @@ export default function ChatAI() {
                 <PaginationContent>
                   <PaginationItem>
                     <PaginationPrevious
+                      className="select-none"
                       onClick={() => setPage((prev) => Math.max(prev - 1, 0))}
                     />
                   </PaginationItem>
@@ -261,6 +258,7 @@ export default function ChatAI() {
 
                   <PaginationItem>
                     <PaginationNext
+                      className="select-none"
                       onClick={() =>
                         setPage((prev) => Math.min(prev + 1, totalPages - 1))
                       }
