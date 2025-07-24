@@ -11,5 +11,5 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: "/shadcn-ts-react-pet",
+  base: "/shadcn-ts-react-pet/",
 });
